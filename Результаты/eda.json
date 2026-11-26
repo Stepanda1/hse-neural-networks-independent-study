@@ -1,0 +1,207 @@
+{
+  "source_sha256": "1f759f453097ae6c7badc57fe237e0dd138165f9f3df429e801d5667de751bcf",
+  "sheets": {
+    "O": 27,
+    "T": 5,
+    "Общее": 32
+  },
+  "general_sheet_is_union": true,
+  "missing_cells": 0,
+  "duplicate_feature_vectors": 0,
+  "split": {
+    "train": {
+      "n": 19,
+      "class_counts": {
+        "1": 9,
+        "0": 10
+      },
+      "groups": [
+        "Вашингтон",
+        "Ж Бизнес",
+        "Ж1 Бизн",
+        "Ж1 рев",
+        "Кеннеди",
+        "Конкурент 1",
+        "Морган Мл",
+        "Раб кл",
+        "Рев",
+        "Рузвельт",
+        "Франклин",
+        "Шоу"
+      ]
+    },
+    "validation": {
+      "n": 8,
+      "class_counts": {
+        "1": 4,
+        "0": 4
+      },
+      "groups": [
+        "Адамс",
+        "Ж1 интел",
+        "Морган",
+        "Рокфеллар",
+        "Трамп",
+        "Трумен"
+      ]
+    },
+    "test": {
+      "n": 5,
+      "class_counts": {
+        "0": 3,
+        "1": 2
+      },
+      "groups": [
+        "Голдуотер",
+        "Ж3 интел",
+        "Картер",
+        "Писатель"
+      ]
+    }
+  },
+  "features": [
+    {
+      "feature": 1,
+      "min_train": 1,
+      "max_train": 2,
+      "median_train": 1,
+      "unique_train": [
+        1,
+        2
+      ],
+      "q1": 1.0,
+      "q3": 1.0,
+      "iqr_flags_train": [
+        "O14",
+        "O16",
+        "O18",
+        "O26"
+      ],
+      "test_outside_training_range": []
+    },
+    {
+      "feature": 2,
+      "min_train": 25,
+      "max_train": 70,
+      "median_train": 44,
+      "unique_train": [
+        25,
+        27,
+        30,
+        37,
+        38,
+        40,
+        41,
+        42,
+        44,
+        45,
+        49,
+        50,
+        57,
+        70
+      ],
+      "q1": 39.0,
+      "q3": 49.0,
+      "iqr_flags_train": [
+        "O4"
+      ],
+      "test_outside_training_range": []
+    },
+    {
+      "feature": 3,
+      "min_train": 0,
+      "max_train": 6,
+      "median_train": 2,
+      "unique_train": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "q1": 1.0,
+      "q3": 4.0,
+      "iqr_flags_train": [],
+      "test_outside_training_range": []
+    },
+    {
+      "feature": 4,
+      "min_train": 0,
+      "max_train": 10,
+      "median_train": 0,
+      "unique_train": [
+        0,
+        7,
+        10
+      ],
+      "q1": 0.0,
+      "q3": 0.0,
+      "iqr_flags_train": [
+        "O3",
+        "O4",
+        "O5"
+      ],
+      "test_outside_training_range": []
+    },
+    {
+      "feature": 5,
+      "min_train": 0,
+      "max_train": 10,
+      "median_train": 7,
+      "unique_train": [
+        0,
+        5,
+        7,
+        9,
+        10
+      ],
+      "q1": 0.0,
+      "q3": 10.0,
+      "iqr_flags_train": [],
+      "test_outside_training_range": []
+    },
+    {
+      "feature": 6,
+      "min_train": 1,
+      "max_train": 10,
+      "median_train": 8,
+      "unique_train": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "q1": 4.0,
+      "q3": 8.0,
+      "iqr_flags_train": [],
+      "test_outside_training_range": []
+    },
+    {
+      "feature": 7,
+      "min_train": 0,
+      "max_train": 10,
+      "median_train": 0,
+      "unique_train": [
+        0,
+        10
+      ],
+      "q1": 0.0,
+      "q3": 0.0,
+      "iqr_flags_train": [
+        "O18",
+        "O20",
+        "O22",
+        "O25"
+      ],
+      "test_outside_training_range": []
+    }
+  ]
+}

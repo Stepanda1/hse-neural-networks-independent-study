@@ -1,0 +1,26 @@
+{
+  "candidates": [
+    2,
+    3,
+    5
+  ],
+  "iterations": 3000,
+  "seed": 42,
+  "activation": "TANH",
+  "algorithm": "RPROP",
+  "selection": "max validation balanced accuracy, then min validation RMSE, then min hidden neurons",
+  "test_usage": "T held out from current model selection; T was inspected in prior coursework, so it is not a new blind external test",
+  "grouping": "All identical textual person labels kept in one partition; identical strings are dataset groups, identity not externally verified",
+  "validation_groups": [
+    "Адамс",
+    "Ж1 интел",
+    "Морган",
+    "Рокфеллар",
+    "Трамп",
+    "Трумен"
+  ],
+  "missing_policy": "No imputation: no missing cells",
+  "balancing_policy": "Class ratios are close to balanced; no oversampling on a tiny grouped dataset",
+  "outlier_policy": "IQR flags reviewed descriptively; unusual valid coded values retained, no residual-based deletion",
+  "training_execution": "Native Nsim5 UI only; this script prepares inputs and analysis, does not train a network"
+}

@@ -1,0 +1,761 @@
+<?xml version='1.0' encoding='utf-8'?>
+<NeuroProject>
+  <NetStruct Name="NetStruct">
+    <Layer Size="7" Name="Input">
+      <ActivationFunction Type="ActivationTANH" />
+    </Layer>
+    <HiddenLayers>
+      <ActivationFunction Type="ActivationTANH" />
+      <Layer Size="2">
+        <ActivationFunction Type="ActivationTANH" />
+      </Layer>
+    </HiddenLayers>
+    <Layer Size="1" Name="Output">
+      <ActivationFunction Type="ActivationTANH" />
+    </Layer>
+  </NetStruct>
+  <TrainerConfig Type="ResilientPropagation" Name="TrainerConfig" />
+  <RandomConfig Type="ConsistentRandomizer" Min="-1" Max="1" Seed="42" Name="RandomConfig" />
+  <DataProcessor Type="BatchDataProcessor" Name="DataProcessor">
+    <DataProcessor Type="SimpleFunctionalPreprocessorLogic" IsUsed="false" CorrelationSelectMode="Mean" />
+    <DataProcessor Type="LinearScale" IsUsed="true" A="-1" B="1">
+      </DataProcessor>
+  </DataProcessor>
+  <TrainingStopParams UseIterations="true" Iterations="3000" UseTeachError="false" TeachError="0.01" UseTestError="false" TestError="0.01" Name="TrainingStopParams" />
+  <DataSet Name="TrainData">
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="1" />
+        <Data Index="1" Value="45" />
+        <Data Index="2" Value="4" />
+        <Data Index="3" Value="10" />
+        <Data Index="4" Value="5" />
+        <Data Index="5" Value="8" />
+        <Data Index="6" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="1" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="1" />
+        <Data Index="1" Value="70" />
+        <Data Index="2" Value="1" />
+        <Data Index="3" Value="10" />
+        <Data Index="4" Value="0" />
+        <Data Index="5" Value="1" />
+        <Data Index="6" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="1" />
+        <Data Index="1" Value="49" />
+        <Data Index="2" Value="5" />
+        <Data Index="3" Value="7" />
+        <Data Index="4" Value="5" />
+        <Data Index="5" Value="8" />
+        <Data Index="6" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="1" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="1" />
+        <Data Index="1" Value="50" />
+        <Data Index="2" Value="1" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="0" />
+        <Data Index="5" Value="8" />
+        <Data Index="6" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="1" />
+        <Data Index="1" Value="27" />
+        <Data Index="2" Value="1" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="10" />
+        <Data Index="5" Value="3" />
+        <Data Index="6" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="1" />
+        <Data Index="1" Value="41" />
+        <Data Index="2" Value="4" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="7" />
+        <Data Index="5" Value="8" />
+        <Data Index="6" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="1" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="1" />
+        <Data Index="1" Value="45" />
+        <Data Index="2" Value="5" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="7" />
+        <Data Index="5" Value="8" />
+        <Data Index="6" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="1" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="2" />
+        <Data Index="1" Value="40" />
+        <Data Index="2" Value="1" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="10" />
+        <Data Index="5" Value="4" />
+        <Data Index="6" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="1" />
+        <Data Index="1" Value="49" />
+        <Data Index="2" Value="6" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="7" />
+        <Data Index="5" Value="8" />
+        <Data Index="6" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="1" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="2" />
+        <Data Index="1" Value="50" />
+        <Data Index="2" Value="2" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="10" />
+        <Data Index="5" Value="6" />
+        <Data Index="6" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="1" />
+        <Data Index="1" Value="38" />
+        <Data Index="2" Value="3" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="10" />
+        <Data Index="5" Value="10" />
+        <Data Index="6" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="1" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="2" />
+        <Data Index="1" Value="25" />
+        <Data Index="2" Value="0" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="0" />
+        <Data Index="5" Value="5" />
+        <Data Index="6" Value="10" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="1" />
+        <Data Index="1" Value="37" />
+        <Data Index="2" Value="2" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="0" />
+        <Data Index="5" Value="4" />
+        <Data Index="6" Value="10" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="1" />
+        <Data Index="1" Value="30" />
+        <Data Index="2" Value="1" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="0" />
+        <Data Index="5" Value="4" />
+        <Data Index="6" Value="10" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="1" />
+        <Data Index="1" Value="42" />
+        <Data Index="2" Value="4" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="10" />
+        <Data Index="5" Value="10" />
+        <Data Index="6" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="1" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="1" />
+        <Data Index="1" Value="57" />
+        <Data Index="2" Value="4" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="0" />
+        <Data Index="5" Value="2" />
+        <Data Index="6" Value="10" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="2" />
+        <Data Index="1" Value="45" />
+        <Data Index="2" Value="2" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="10" />
+        <Data Index="5" Value="7" />
+        <Data Index="6" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="1" />
+        <Data Index="1" Value="40" />
+        <Data Index="2" Value="2" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="9" />
+        <Data Index="5" Value="9" />
+        <Data Index="6" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="1" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="1" />
+        <Data Index="1" Value="44" />
+        <Data Index="2" Value="3" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="9" />
+        <Data Index="5" Value="9" />
+        <Data Index="6" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="1" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+  </DataSet>
+  <DataSet Name="TestData">
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="1" />
+        <Data Index="1" Value="39" />
+        <Data Index="2" Value="2" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="8" />
+        <Data Index="5" Value="9" />
+        <Data Index="6" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="1" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="1" />
+        <Data Index="1" Value="72" />
+        <Data Index="2" Value="1" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="10" />
+        <Data Index="5" Value="7" />
+        <Data Index="6" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="1" />
+        <Data Index="1" Value="43" />
+        <Data Index="2" Value="3" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="8" />
+        <Data Index="5" Value="9" />
+        <Data Index="6" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="1" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="2" />
+        <Data Index="1" Value="40" />
+        <Data Index="2" Value="1" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="0" />
+        <Data Index="5" Value="10" />
+        <Data Index="6" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="1" />
+        <Data Index="1" Value="40" />
+        <Data Index="2" Value="3" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="7" />
+        <Data Index="5" Value="8" />
+        <Data Index="6" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="1" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="1" />
+        <Data Index="1" Value="44" />
+        <Data Index="2" Value="4" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="7" />
+        <Data Index="5" Value="8" />
+        <Data Index="6" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="1" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="1" />
+        <Data Index="1" Value="75" />
+        <Data Index="2" Value="3" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="9" />
+        <Data Index="5" Value="7" />
+        <Data Index="6" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="1" />
+        <Data Index="1" Value="78" />
+        <Data Index="2" Value="1" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="10" />
+        <Data Index="5" Value="7" />
+        <Data Index="6" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+  </DataSet>
+  <DataSet Name="CheckData">
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="1" />
+        <Data Index="1" Value="39" />
+        <Data Index="2" Value="2" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="8" />
+        <Data Index="5" Value="9" />
+        <Data Index="6" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="1" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="1" />
+        <Data Index="1" Value="72" />
+        <Data Index="2" Value="1" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="10" />
+        <Data Index="5" Value="7" />
+        <Data Index="6" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="1" />
+        <Data Index="1" Value="43" />
+        <Data Index="2" Value="3" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="8" />
+        <Data Index="5" Value="9" />
+        <Data Index="6" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="1" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="2" />
+        <Data Index="1" Value="40" />
+        <Data Index="2" Value="1" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="0" />
+        <Data Index="5" Value="10" />
+        <Data Index="6" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="1" />
+        <Data Index="1" Value="40" />
+        <Data Index="2" Value="3" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="7" />
+        <Data Index="5" Value="8" />
+        <Data Index="6" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="1" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="1" />
+        <Data Index="1" Value="44" />
+        <Data Index="2" Value="4" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="7" />
+        <Data Index="5" Value="8" />
+        <Data Index="6" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="1" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="1" />
+        <Data Index="1" Value="75" />
+        <Data Index="2" Value="3" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="9" />
+        <Data Index="5" Value="7" />
+        <Data Index="6" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+    <DataRow>
+      <Array Name="Input">
+        <Data Index="0" Value="1" />
+        <Data Index="1" Value="78" />
+        <Data Index="2" Value="1" />
+        <Data Index="3" Value="0" />
+        <Data Index="4" Value="10" />
+        <Data Index="5" Value="7" />
+        <Data Index="6" Value="0" />
+      </Array>
+      <Array Name="Ideal">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Calced">
+        <Data Index="0" Value="0" />
+      </Array>
+      <Array Name="Error">
+        <Data Index="0" Value="0" />
+      </Array>
+    </DataRow>
+  </DataSet>
+  <DataSet Name="CalcData" />
+  <ErrorGraphData Name="ErrorGraphData">
+    <DataSeries Id="TrainError">
+      </DataSeries>
+    <DataSeries Id="TestError">
+      </DataSeries>
+  </ErrorGraphData>
+  <TrainStatus Name="NetData" TotalIterations="0">
+    <Array Name="Weigths">
+      <Data Index="0" Value="0" />
+      <Data Index="1" Value="0" />
+      <Data Index="2" Value="0" />
+      <Data Index="3" Value="0" />
+      <Data Index="4" Value="0" />
+      <Data Index="5" Value="0" />
+      <Data Index="6" Value="0" />
+      <Data Index="7" Value="0" />
+      <Data Index="8" Value="0" />
+      <Data Index="9" Value="0" />
+      <Data Index="10" Value="0" />
+      <Data Index="11" Value="0" />
+      <Data Index="12" Value="0" />
+      <Data Index="13" Value="0" />
+      <Data Index="14" Value="0" />
+      <Data Index="15" Value="0" />
+      <Data Index="16" Value="0" />
+      <Data Index="17" Value="0" />
+      <Data Index="18" Value="0" />
+    </Array>
+  </TrainStatus>
+</NeuroProject>
